@@ -26,22 +26,4 @@ public class GenerateData {
 		}
 		return array;
 	}
-
-	/**
-	 * print array
-	 * 
-	 * @author chenshaobin Mar 17, 2018 2:28:10 PM
-	 *
-	 * @param array
-	 */
-	public static void printArray(Integer[] array) {
-		for (int i = 0; i < array.length; i++) {
-			if (i > 0 && i < array.length) {
-				System.out.print(", ");
-			}
-			System.out.print(array[i]);
-		}
-		System.out.println();
-	}
-
 }

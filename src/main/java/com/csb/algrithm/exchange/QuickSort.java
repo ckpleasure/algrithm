@@ -3,6 +3,8 @@ package com.csb.algrithm.exchange;
 import com.csb.algrithm.Sort;
 
 /**
+ * time complexity O(nlogn), instability
+ * 
  * @author chenshaobin Mar 17, 2018 3:33:16 PM
  *
  */

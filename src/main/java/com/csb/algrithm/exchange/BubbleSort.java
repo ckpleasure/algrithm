@@ -3,6 +3,8 @@ package com.csb.algrithm.exchange;
 import com.csb.algrithm.Sort;
 
 /**
+ * time complexity O(n^2), stability
+ * 
  * @author chenshaobin Mar 17, 2018 1:59:40 PM
  *
  */

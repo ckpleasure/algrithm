@@ -3,6 +3,7 @@ package com.csb.util;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
+import java.util.Arrays;
 
 import com.csb.algrithm.Sort;
 
@@ -23,14 +24,11 @@ public class SortHandle implements InvocationHandler {
 
 	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
 		Integer[] array = (Integer[]) args[0];
-
-		System.out.println("array before bubble sort:");
-		GenerateData.printArray(array);
+		System.out.println("before: " + Arrays.toString(array));
 
 		Object result = method.invoke(target, args);
 
-		System.out.println("array before after sort:");
-		GenerateData.printArray(array);
+		System.out.println("after:  " + Arrays.toString(array));
 		return result;
 	}
 
