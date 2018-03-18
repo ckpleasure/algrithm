@@ -1,5 +1,7 @@
 package com.csb.algrithm.exchange;
 
+import static org.junit.Assert.assertArrayEquals;
+
 import org.junit.Test;
 
 import com.csb.util.GenerateData;
@@ -14,6 +16,11 @@ public class QuickSortTest {
 	@Test
 	public void sortTest() {
 		Integer[] array = GenerateData.randamArray(10, 100);
-		new SortHandle(new QuickSort()).getProxy().sort(array);
+		Integer[] expect = GenerateData.sort(array);
+
+		SortHandle handle = new SortHandle(new QuickSort());
+		handle.getProxy().sort(array);
+
+		assertArrayEquals(expect, array);
 	}
 }

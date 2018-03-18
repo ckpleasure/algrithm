@@ -1,5 +1,7 @@
 package com.csb.algrithm.select;
 
+import static org.junit.Assert.assertArrayEquals;
+
 import org.junit.Test;
 
 import com.csb.util.GenerateData;
@@ -16,7 +18,11 @@ public class StraightSelectionSortTest {
 	@Test
 	public void sortTest() {
 		Integer[] array = GenerateData.randamArray(10, 100);
+		Integer[] expect = GenerateData.sort(array);
+		
 		SortHandle handle = new SortHandle(new StraightSelectionSort());
 		handle.getProxy().sort(array);
+
+		assertArrayEquals(expect, array);
 	}
 }

@@ -1,5 +1,8 @@
 package com.csb.util;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 import java.util.Random;
 
 /**
@@ -25,5 +28,22 @@ public class GenerateData {
 			array[i] = value;
 		}
 		return array;
+	}
+
+	/**
+	 * sort by JDK Collections.sort
+	 * 
+	 * @author chenshaobin Mar 18, 2018 8:14:44 PM
+	 *
+	 * @param array
+	 * @return
+	 */
+	public static Integer[] sort(Integer[] array) {
+		Integer[] copy = new Integer[array.length];
+		System.arraycopy(array, 0, copy, 0, array.length);
+		List<Integer> list = Arrays.asList(copy);
+		Collections.sort(list);
+		copy = list.toArray(new Integer[] {});
+		return copy;
 	}
 }
