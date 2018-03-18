@@ -46,4 +46,17 @@ public class GenerateData {
 		copy = list.toArray(new Integer[] {});
 		return copy;
 	}
+
+	/**
+	 * @author chenshaobin Mar 18, 2018 6:26:11 PM
+	 *
+	 * @param array
+	 * @param i
+	 * @param j
+	 */
+	public static void swap(Integer[] array, int i, int j) {
+		int tmp = array[i];
+		array[i] = array[j];
+		array[j] = tmp;
+	}
 }

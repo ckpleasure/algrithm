@@ -5,3 +5,4 @@
 - Straight Selection Sort
 - Heap Sort
 - Straight Insertion Sort
+- Shell's Sort

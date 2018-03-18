@@ -1,6 +1,7 @@
 package com.csb.algrithm.select;
 
 import com.csb.algrithm.Sort;
+import com.csb.util.GenerateData;
 
 /**
  * time complexity O(nlogn), instability
@@ -17,7 +18,7 @@ public class HeapSort implements Sort {
 		}
 
 		for (int j = array.length - 1; j > 0; j--) {
-			swap(array, 0, j);
+			GenerateData.swap(array, 0, j);
 			adjustHeap(array, 0, j);
 		}
 	}
@@ -43,18 +44,5 @@ public class HeapSort implements Sort {
 			}
 		}
 		array[i] = tmp;
-	}
-
-	/**
-	 * @author chenshaobin Mar 18, 2018 6:26:11 PM
-	 *
-	 * @param array
-	 * @param i
-	 * @param j
-	 */
-	public void swap(Integer[] array, int i, int j) {
-		int tmp = array[i];
-		array[i] = array[j];
-		array[j] = tmp;
 	}
 }
