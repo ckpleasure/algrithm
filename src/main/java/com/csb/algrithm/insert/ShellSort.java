@@ -1,7 +1,5 @@
 package com.csb.algrithm.insert;
 
-import java.util.Arrays;
-
 import com.csb.algrithm.Sort;
 import com.csb.util.GenerateData;
 
@@ -21,7 +19,6 @@ public class ShellSort implements Sort {
 				int j = i;
 				while (j - gap >= 0 && array[j] < array[j - gap]) {
 					GenerateData.swap(array, j, j - gap);
-					System.out.println(Arrays.toString(array));
 					j -= gap;
 				}
 			}

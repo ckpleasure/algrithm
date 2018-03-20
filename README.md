@@ -6,3 +6,4 @@
 - Heap Sort
 - Straight Insertion Sort
 - Shell's Sort
+- Merge Sort
